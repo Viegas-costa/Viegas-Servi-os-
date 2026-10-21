@@ -5,53 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12332d">
-  <meta name="description" content="Viegas Serviços: pintura, estuque e acabamentos em Luanda. Contacte a nossa equipa e solicite um orçamento.">
-  <title>Viegas Serviços | Pintura e Acabamentos</title>
+  <meta name="description" content="Viegas Serviços em Luanda: pintura, estuque e acabamentos para casas, escritórios e outros espaços. Contacte a nossa equipa e solicite um orçamento.">
+  <title>Viegas Serviços | Pintura, Estuque e Acabamentos</title>
+
   <style>
     :root {
       --verde: #12332d;
-      --verde2: #21463c;
+      --verde-claro: #21463c;
       --dourado: #d5a13b;
       --creme: #f3f0e6;
       --branco: #ffffff;
       --texto: #26332f;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--texto);
       background: var(--creme);
-      line-height: 1.65;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
 
     header {
       background: var(--verde);
       color: white;
       text-align: center;
-      padding: 28px 16px;
+      padding: 30px 16px;
     }
 
     header h1 {
       color: var(--dourado);
-      margin: 0;
-      font-size: clamp(27px, 6vw, 42px);
+      font-size: clamp(28px, 6vw, 42px);
       line-height: 1.2;
+      margin: 0;
     }
 
-    header p { margin: 10px 0 0; }
+    header p {
+      margin: 10px 0 0;
+    }
 
     nav {
-      background: var(--verde2);
+      background: var(--verde-claro);
       padding: 14px 8px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 8px 22px;
+      gap: 10px 22px;
     }
 
     nav a {
@@ -60,25 +74,27 @@
       font-weight: bold;
     }
 
-    nav a:hover { color: var(--dourado); }
+    nav a:hover {
+      color: var(--dourado);
+    }
 
     .hero {
       text-align: center;
-      padding: 64px 20px;
+      padding: 65px 18px;
       background: var(--creme);
     }
 
     .hero h2 {
-      font-size: clamp(30px, 5vw, 46px);
-      line-height: 1.2;
       color: var(--verde);
+      font-size: clamp(30px, 6vw, 46px);
+      line-height: 1.2;
       max-width: 760px;
-      margin: 0 auto 22px;
+      margin: 0 auto 20px;
     }
 
     .hero p {
       max-width: 680px;
-      margin: 0 auto 28px;
+      margin: 0 auto 24px;
       font-size: 18px;
     }
 
@@ -86,61 +102,128 @@
       display: inline-block;
       background: var(--dourado);
       color: #18251f;
-      padding: 13px 21px;
+      padding: 13px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       margin: 5px;
+      text-align: center;
     }
 
-    .botao:hover { filter: brightness(0.94); }
+    .botao:hover {
+      filter: brightness(0.94);
+    }
 
     .botao-verde {
       background: var(--verde);
       color: white;
     }
 
-    section { padding: 48px 18px; }
+    section {
+      padding: 48px 18px;
+      scroll-margin-top: 12px;
+    }
 
     .conteudo {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
     }
 
     section h2 {
-      text-align: center;
       color: var(--verde);
-      font-size: 30px;
-      margin: 0 0 28px;
+      text-align: center;
+      font-size: clamp(25px, 5vw, 32px);
+      line-height: 1.3;
+      margin: 0 0 16px;
     }
 
-    .servicos { background: #f8f8f3; }
+    .introducao {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .servicos {
+      background: #f8f8f3;
+    }
 
     .grelha {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
     }
 
     .cartao {
       background: white;
       border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    }
+
+    .cartao img {
+      height: 210px;
+    }
+
+    .cartao-conteudo {
+      padding: 20px;
     }
 
     .cartao h3 {
       color: #8c6b25;
-      margin-top: 0;
       font-size: 22px;
+      margin: 0 0 10px;
     }
 
-    .sobre { background: white; }
+    .cartao p {
+      margin: 0 0 12px;
+    }
+
+    .galeria {
+      background: var(--creme);
+    }
+
+    .galeria img {
+      border-radius: 12px;
+      height: 230px;
+    }
+
+    .legenda {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .sobre {
+      background: white;
+    }
 
     .sobre p {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto 16px;
       text-align: center;
+    }
+
+    .vantagens {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .vantagem {
+      background: var(--creme);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .vantagem h3 {
+      color: var(--verde);
+      margin: 0 0 8px;
+    }
+
+    .vantagem p {
+      margin: 0;
     }
 
     .contactos {
@@ -149,14 +232,18 @@
       text-align: center;
     }
 
-    .contactos h2 { color: var(--dourado); }
-
-    .contactos p {
-      max-width: 650px;
-      margin: 0 auto 20px;
+    .contactos h2 {
+      color: var(--dourado);
     }
 
-    .contactos .botao { margin-top: 10px; }
+    .contactos p {
+      max-width: 700px;
+      margin: 12px auto;
+    }
+
+    .contactos .botao {
+      margin-top: 14px;
+    }
 
     footer {
       background: #0b241f;
@@ -166,22 +253,42 @@
       font-size: 14px;
     }
 
+    footer p {
+      margin: 5px;
+    }
+
     a:focus-visible {
       outline: 3px solid var(--dourado);
       outline-offset: 4px;
     }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 48px 16px;
+      }
+
+      section {
+        padding: 38px 15px;
+      }
+
+      .botao {
+        padding: 12px 16px;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <header id="inicio">
     <h1>VIEGAS SERVIÇOS</h1>
     <p>Pintura • Estuque • Acabamentos</p>
+    <p>Qualidade e dedicação para transformar o seu espaço.</p>
   </header>
 
   <nav aria-label="Menu principal">
     <a href="#inicio">Início</a>
     <a href="#servicos">Serviços</a>
+    <a href="#trabalhos">Galeria</a>
     <a href="#sobre">Sobre nós</a>
     <a href="#contactos">Contactos</a>
   </nav>
@@ -189,44 +296,134 @@
   <main>
     <section class="hero">
       <h2>Damos nova vida ao seu espaço!</h2>
+
       <p>
-        Soluções de pintura, estuque e acabamentos
-        para transformar a sua casa ou o seu negócio.
+        A nossa equipa está preparada para ajudar a melhorar
+        a aparência da sua casa, escritório ou outro espaço,
+        com serviços de pintura, estuque e acabamentos.
       </p>
+
       <a class="botao"
          href="https://wa.me/244972835559?text=Ola%21%20Gostaria%20de%20solicitar%20um%20orcamento%20a%20Viegas%20Servicos."
-         target="_blank" rel="noopener noreferrer">
-        Solicitar orçamento
+         target="_blank"
+         rel="noopener noreferrer">
+        Solicitar orçamento pelo WhatsApp
       </a>
     </section>
 
     <section class="servicos" id="servicos">
       <div class="conteudo">
         <h2>Os nossos serviços</h2>
+
+        <p class="introducao">
+          Conheça as nossas áreas de trabalho. Entre em contacto
+          para explicar o seu projecto e saber como podemos ajudar.
+        </p>
+
         <div class="grelha">
           <article class="cartao">
-            <h3>🎨 Pintura</h3>
-            <p>
-              Pintura de interiores e exteriores,
-              com atenção aos detalhes e ao acabamento.
-            </p>
+            <img
+              src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80"
+              alt="Profissional a realizar trabalho de pintura"
+              loading="lazy">
+
+            <div class="cartao-conteudo">
+              <h3>🎨 Pintura</h3>
+              <p>
+                Pintura de interiores e exteriores, com atenção
+                à preparação das superfícies, à aplicação da tinta
+                e à qualidade do acabamento.
+              </p>
+              <a class="botao"
+                 href="https://wa.me/244972835559?text=Ola%21%20Tenho%20interesse%20em%20servicos%20de%20pintura."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Pedir orçamento
+              </a>
+            </div>
           </article>
 
           <article class="cartao">
-            <h3>🧱 Estuque</h3>
-            <p>
-              Preparação e regularização de paredes
-              para um acabamento cuidado.
-            </p>
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+              alt="Espaço de construção e preparação de superfícies"
+              loading="lazy">
+
+            <div class="cartao-conteudo">
+              <h3>🧱 Estuque</h3>
+              <p>
+                Preparação e regularização de paredes para ajudar
+                a obter superfícies uniformes e prontas para
+                receber o acabamento adequado.
+              </p>
+              <a class="botao"
+                 href="https://wa.me/244972835559?text=Ola%21%20Tenho%20interesse%20em%20servicos%20de%20estuque."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Pedir orçamento
+              </a>
+            </div>
           </article>
 
           <article class="cartao">
-            <h3>🏠 Acabamentos</h3>
-            <p>
-              Serviços de acabamento para melhorar
-              a aparência dos seus espaços.
-            </p>
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+              alt="Interior moderno com acabamentos decorativos"
+              loading="lazy">
+
+            <div class="cartao-conteudo">
+              <h3>🏠 Acabamentos</h3>
+              <p>
+                Trabalhos de acabamento para melhorar a apresentação
+                dos espaços, de acordo com as necessidades
+                e as características de cada projecto.
+              </p>
+              <a class="botao"
+                 href="https://wa.me/244972835559?text=Ola%21%20Tenho%20interesse%20em%20servicos%20de%20acabamentos."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Pedir orçamento
+              </a>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="galeria" id="trabalhos">
+      <div class="conteudo">
+        <h2>Inspiração para o seu espaço</h2>
+
+        <p class="introducao">
+          Veja referências visuais de interiores e acabamentos.
+          Estas fotografias são ilustrativas e não representam
+          necessariamente trabalhos realizados pela nossa equipa.
+        </p>
+
+        <div class="grelha">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+              alt="Sala moderna como inspiração para acabamentos"
+              loading="lazy">
+            <p class="legenda">Inspiração para interiores</p>
+          </div>
+
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+              alt="Interior residencial com acabamento moderno"
+              loading="lazy">
+            <p class="legenda">Ideias para renovar espaços</p>
+          </div>
+
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+              alt="Espaço interior com paredes e decoração cuidada"
+              loading="lazy">
+            <p class="legenda">Referências de acabamento</p>
+          </div>
         </div>
       </div>
     </section>
@@ -234,31 +431,61 @@
     <section class="sobre" id="sobre">
       <div class="conteudo">
         <h2>Sobre a Viegas Serviços</h2>
+
         <p>
           Somos uma equipa dedicada a serviços de pintura,
-          estuque e acabamentos.
+          estuque e acabamentos em Luanda, Angola.
         </p>
+
         <p>
-          O nosso objectivo é compreender as necessidades
-          de cada cliente, prestar um atendimento responsável
-          e procurar um resultado cuidado em cada trabalho.
+          Procuramos compreender as necessidades de cada cliente,
+          organizar o trabalho com responsabilidade e prestar
+          um atendimento atencioso ao longo de cada projecto.
         </p>
-        <p><strong>Área de atendimento: Luanda, Angola.</strong></p>
+
+        <p>
+          Cada serviço começa com uma conversa para compreender
+          o espaço, o trabalho pretendido e os detalhes necessários
+          para preparar um orçamento.
+        </p>
+
+        <div class="vantagens">
+          <div class="vantagem">
+            <h3>🤝 Atendimento directo</h3>
+            <p>Fale directamente com a nossa equipa.</p>
+          </div>
+
+          <div class="vantagem">
+            <h3>📍 Luanda</h3>
+            <p>Área de atendimento em Luanda, Angola.</p>
+          </div>
+
+          <div class="vantagem">
+            <h3>💬 Pedido de orçamento</h3>
+            <p>Explique o seu projecto pelo WhatsApp.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="contactos" id="contactos">
       <div class="conteudo">
         <h2>Vamos conversar sobre o seu projecto?</h2>
+
         <p>
-          Contacte a nossa equipa para explicar o serviço
-          de que precisa e solicitar um orçamento.
+          Diga-nos que serviço pretende realizar, em que zona
+          de Luanda se encontra e, se possível, envie fotografias
+          do espaço pelo WhatsApp.
         </p>
-        <p><strong>Telefone: +244 972 835 559</strong></p>
+
+        <p>
+          <strong>Telefone: +244 972 835 559</strong>
+        </p>
 
         <a class="botao"
-           href="https://wa.me/244972835559?text=Ola%21%20Gostaria%20de%20pedir%20um%20orcamento."
-           target="_blank" rel="noopener noreferrer">
+           href="https://wa.me/244972835559?text=Ola%21%20Gostaria%20de%20pedir%20um%20orcamento%20a%20Viegas%20Servicos."
+           target="_blank"
+           rel="noopener noreferrer">
           Falar pelo WhatsApp
         </a>
 
@@ -271,8 +498,9 @@
   </main>
 
   <footer>
-    <p>© <span id="ano">2026</span> Viegas Serviços</p>
-    <p>Pintura • Estuque • Acabamentos | Luanda, Angola</p>
+    <p>&copy; <span id="ano">2026</span> Viegas Serviços</p>
+    <p>Pintura • Estuque • Acabamentos</p>
+    <p>Luanda, Angola</p>
   </footer>
 
   <script>
